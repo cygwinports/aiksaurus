@@ -5,94 +5,86 @@ with two simple command-line interfaces.
 
 Runtime requirements:
   cygwin-1.5.18-1
-
-Additional requirements for the GTK frontend:
-  atk-runtime-1.9.1-1
-  expat-1.95.8-1
-  glib2-runtime-2.6.5-1
-  gtk2-x11-runtime-2.6.8-1
-  libXft2-2.1.6-1
-  libfontconfig1-2.2.2-1
-  libfreetype26-2.1.9-1
-  libiconv2-1.9.2-1
-  libintl3-0.14.1-1
-  pango-runtime-1.8.1-1
-  xorg-x11-bin-dlls-6.8.2.0-1
-  zlib-1.2.3-1
+(libAiksaurusGTK, gaiksaurus)
+  libglib2.0_0-2.18.3-1
+  libgtk2.0_0-2.14.5-1
 
 Build requirements:
-  cygwin-1.5.18-1
-  autoconf2.5-2.59-3
-  automake1.9-1.9.6-1
-  binutils-20050610-1
-  gawk-3.1.5-1
-  gcc-core-3.4.4-1
-  gcc-g++-3.4.4-1
-  libtool1.5-1.5.20-1
-  make-3.80-1
-  sed-4.1.4-1
-
-  atk-devel-1.9.1-1
-  expat-1.95.8-1
-  gettext-0.14.1-1
-  glib2-devel-2.6.5-1
-  gtk2-x11-devel-2.6.8-1
-  libXft-devel-2.1.6-1
-  libfontconfig-devel-2.2.2-1
-  libfreetype2-devel-2.1.9-1
-  libiconv-1.9.2-1
-  pango-devel-1.8.1-1
-  xorg-x11-devel-6.8.2.0-1
-  zlib-1.2.3-1
+(besides corresponding devel packages)
+  autoconf2.5-2.63-1
+  automake1.9-1.9.6-3
+  binutils-20080624-2
+  cygport-0.4.3-1
+  gawk-3.1.6-1
+  gcc-core-3.4.4-3
+  gcc-g++-3.4.4-3
+  libtool-2.2.6a-1
+  make-3.81-1
+  pkg-config-0.23a-2
+  sed-4.1.5-2
 
 Canonical homepage:
   http://aiksaurus.sourceforge.net/
 
 Canonical download:
-  http://prdownloads.sourceforge.net/aiksaurus/
+  http://downloads.sourceforge.net/aiksaurus/
 
 -------------------------------------------
 
 Build instructions:
-  unpack aiksaurus-1.2.1-1-src.tar.bz2
+  unpack aiksaurus-1.2.1-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  ./Aiksaurus-1.2.1-1.sh all
+  cygport ./aiksaurus-1.2.1-X.cygport all
 
 This will create:
-  /usr/src/aiksaurus-1.2.1-1-src.tar.bz2
-  /usr/src/aiksaurus-1.2.1-1.tar.bz2
-  /usr/src/aiksaurus-gtk-1.2.1-1.tar.bz2
+  /usr/src/aiksaurus-1.2.1-X-src.tar.bz2
+  /usr/src/aiksaurus-1.2.1-X.tar.bz2
+  /usr/src/gaiksaurus-1.2.1-X.tar.bz2
+  /usr/src/libAiksaurus-common-1.2.1-X.tar.bz2
+  /usr/src/libAiksaurus-devel-1.2.1-X.tar.bz2
+  /usr/src/libAiksaurus1.2_0-1.2.1-X.tar.bz2
+  /usr/src/libAiksaurusGTK-devel-1.2.1-X.tar.bz2
+  /usr/src/libAiksaurusGTK1.2_0-1.2.1-X.tar.bz2
 
 -------------------------------------------
 
-Files included in the binary package:
+Files included in the binary packages:
 
+(aiksaurus)
   /usr/bin/aiksaurus.exe
   /usr/bin/caiksaurus.exe
-  /usr/bin/cygAiksaurus-1-2-0.dll
-  /usr/include/Aiksaurus/Aiksaurus.h
-  /usr/include/Aiksaurus/AiksaurusC.h
-  /usr/lib/libAiksaurus.dll.a
-  /usr/lib/libAiksaurus.la
-  /usr/lib/pkgconfig/aiksaurus-1.0.pc
-  /usr/share/aiksaurus/meanings.dat
-  /usr/share/aiksaurus/words.dat
   /usr/share/doc/aiksaurus-1.2.1/AUTHORS
   /usr/share/doc/aiksaurus-1.2.1/ChangeLog
   /usr/share/doc/aiksaurus-1.2.1/COPYING
   /usr/share/doc/aiksaurus-1.2.1/INSTALL
   /usr/share/doc/aiksaurus-1.2.1/NEWS
   /usr/share/doc/aiksaurus-1.2.1/README
-  /usr/share/doc/Cygwin/aiksaurus-1.2.1.README
 
-Files included in the gtk package:
-
-  /usr/bin/cygAiksaurusGTK-1-2-0.dll
+(gaiksaurus)
   /usr/bin/gaiksaurus.exe
+
+(libAiksaurus1.2_0)
+  /usr/bin/cygAiksaurus-1-2-0.dll
+  /usr/share/aiksaurus/meanings.dat
+  /usr/share/aiksaurus/words.dat
+
+(libAiksaurus-devel)
+  /usr/include/Aiksaurus/Aiksaurus.h
+  /usr/include/Aiksaurus/AiksaurusC.h
+  /usr/lib/libAiksaurus.a
+  /usr/lib/libAiksaurus.dll.a
+  /usr/lib/libAiksaurus.la
+  /usr/lib/pkgconfig/aiksaurus-1.0.pc
+
+(libAiksaurusGTK1.2_0)
+  /usr/bin/cygAiksaurusGTK-1-2-0.dll
+
+(libAiksaurusGTK-devel)
   /usr/include/Aiksaurus/AiksaurusGTK-C.h
   /usr/include/Aiksaurus/AiksaurusGTK.h
+  /usr/lib/libAiksaurusGTK.a
   /usr/lib/libAiksaurusGTK.dll.a
   /usr/lib/libAiksaurusGTK.la
   /usr/lib/pkgconfig/gaiksaurus-1.0.pc
@@ -100,6 +92,9 @@ Files included in the gtk package:
 ------------------
 
 Port Notes:
+
+----- version 1.2.1-2 -----
+Rebuilt with cygport.
 
 ----- version 1.2.1-1 -----
 Major version bump.

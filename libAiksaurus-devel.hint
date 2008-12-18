@@ -1,6 +1,6 @@
-category: Libs Text Gnome
-requires: cygwin aiksaurus gtk2-x11-runtime
+category: Text
+requires: cygwin libAiksaurus1.2_0
 external-source: aiksaurus
-sdesc: "English thesaurus library (GTK frontend)"
+sdesc: "English thesaurus library (development)"
 ldesc: "Aiksaurus is an English-language thesaurus library
 with two simple command-line interfaces."

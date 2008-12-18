@@ -1,5 +1,5 @@
-category: Libs Text
-requires: cygwin
-sdesc: "English thesaurus library"
+category: Text
+requires: cygwin libAiksaurus1.2_0
+sdesc: "English thesaurus (command-line apps)"
 ldesc: "Aiksaurus is an English-language thesaurus library
 with two simple command-line interfaces."

@@ -1,0 +1,19 @@
+DESCRIPTION="English language thesaurus"
+HOMEPAGE="http://aiksaurus.sourceforge.net/"
+SRC_URI="mirror://sourceforge/aiksaurus/${P}.tar.gz"
+PATCH_URI="
+	mirror://portage/app-text/${PN}/files/${P}-gcc43.patch
+	1.2.1-libtool22.patch
+"
+
+PKG_NAMES="${PN} g${PN} libAiksaurus1.2_0 libAiksaurus-devel
+           libAiksaurusGTK1.2_0 libAiksaurusGTK-devel"
+aiksaurus_CONTENTS="usr/bin/aiksaurus.exe usr/bin/caiksaurus.exe usr/share/doc/"
+gaiksaurus_CONTENTS="usr/bin/gaiksaurus.exe"
+libAiksaurus1_2_0_CONTENTS="usr/bin/cygAiksaurus-1-2-0.dll usr/share/aiksaurus/"
+libAiksaurus_devel_CONTENTS="--exclude=*GTK* --exclude=gaiksaurus* usr/include/ usr/lib/"
+libAiksaurusGTK1_2_0_CONTENTS="usr/bin/cygAiksaurusGTK-1-2-0.dll"
+libAiksaurusGTK_devel_CONTENTS="usr/include/Aiksaurus/AiksaurusGTK*
+                                usr/lib/libAiksaurusGTK.* usr/lib/pkgconfig/gaiksaurus-1.0.pc"
+
+CYGCONF_ARGS="--with-gtk"
