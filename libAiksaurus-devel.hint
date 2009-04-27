@@ -1,5 +1,5 @@
 category: Text
-requires: cygwin libAiksaurus1.2_0
+requires: cygwin libAiksaurus1.2_0 libstdc++6-devel
 external-source: aiksaurus
 sdesc: "English thesaurus library (development)"
 ldesc: "Aiksaurus is an English-language thesaurus library

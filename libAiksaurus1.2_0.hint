@@ -1,5 +1,5 @@
 category: Text
-requires: cygwin
+requires: cygwin libgcc1 libstdc++6
 external-source: aiksaurus
 sdesc: "English thesaurus library (runtime)"
 ldesc: "Aiksaurus is an English-language thesaurus library

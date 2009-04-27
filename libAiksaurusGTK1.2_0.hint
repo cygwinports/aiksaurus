@@ -1,5 +1,5 @@
 category: Text Gnome
-requires: cygwin libAiksaurus1.2_0 libglib2.0_0 libgtk2.0_0
+requires: cygwin libAiksaurus1.2_0 libgcc1 libglib2.0_0 libgtk2.0_0 libstdc++6
 external-source: aiksaurus
 sdesc: "English thesaurus library (GTK+ runtime)"
 ldesc: "Aiksaurus is an English-language thesaurus library
