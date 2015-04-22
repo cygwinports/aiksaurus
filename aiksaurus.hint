@@ -1,5 +1,0 @@
-category: Text
-requires: libAiksaurus1.2_0 libgcc1 libstdc++6
-sdesc: "English thesaurus (command-line apps)"
-ldesc: "Aiksaurus is an English-language thesaurus library
-with two simple command-line interfaces."

@@ -1,6 +1,0 @@
-category: Text
-requires: libAiksaurus1.2_0 libstdc++6-devel
-external-source: aiksaurus
-sdesc: "English thesaurus library (development)"
-ldesc: "Aiksaurus is an English-language thesaurus library
-with two simple command-line interfaces."
