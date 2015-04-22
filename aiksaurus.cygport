@@ -1,21 +1,26 @@
 NAME="aiksaurus"
 VERSION=1.2.1
-RELEASE=10
+RELEASE=11
 CATEGORY="Text"
 SUMMARY="English thesaurus"
 DESCRIPTION="Aiksaurus is an English-language thesaurus library
 with two simple command-line interfaces."
 HOMEPAGE="http://aiksaurus.sourceforge.net/"
-SRC_URI="mirror://sourceforge/aiksaurus/aiksaurus-${VERSION}.tar.gz"
+SRC_URI="
+	mirror://sourceforge/aiksaurus/aiksaurus-${VERSION}.tar.gz
+	http://pkgs.fedoraproject.org/cgit/aiksaurus.git/plain/aiksaurus.desktop
+	http://pkgs.fedoraproject.org/cgit/aiksaurus.git/plain/aiksaurus.png
+"
 PATCH_URI="
-	mirror://portage/app-text/${NAME}/files/${NAME}-1.2.1-gcc43.patch
+	http://pkgs.fedoraproject.org/cgit/aiksaurus.git/plain/aiksaurus-1.2.1-gcc43.patch
+	http://pkgs.fedoraproject.org/cgit/aiksaurus.git/plain/aiksaurus-security.patch
 	1.2.1-libtool22.patch
 "
 
 PKG_NAMES="${NAME} g${NAME} libAiksaurus1.2_0 libAiksaurus-devel
            libAiksaurusGTK1.2_0 libAiksaurusGTK-devel"
 aiksaurus_CONTENTS="usr/bin/aiksaurus.exe usr/bin/caiksaurus.exe usr/share/doc/"
-gaiksaurus_CONTENTS="usr/bin/gaiksaurus.exe usr/share/applications/"
+gaiksaurus_CONTENTS="usr/bin/gaiksaurus.exe usr/share/applications/ usr/share/pixmaps/"
 libAiksaurus1_2_0_CATEGORY="Libs"
 libAiksaurus1_2_0_CONTENTS="usr/bin/cygAiksaurus-1-2-0.dll usr/share/aiksaurus/"
 libAiksaurus_devel_CATEGORY="Libs"
@@ -32,5 +37,6 @@ src_install() {
 	cd ${B}
 	cyginstall
 
-	make_desktop_entry gaiksaurus Thesaurus accessories-dictionary "GTK;Office;Dictionary"
+	domenu ${S}/aiksaurus.desktop
+	doicon ${S}/aiksaurus.png
 }
